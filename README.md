@@ -9,3 +9,5 @@
 'npm install'
 
 3. Start application
+
+4. npx tailwindcss -i ./public/stylesheets/input.css -o ./public/stylesheets/output.css --watch
