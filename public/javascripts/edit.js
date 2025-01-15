@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Loopar igenom alla "Edit"-knappar och lägger till klickhändelser
     editButtons.forEach((btn, index) => {
       btn.addEventListener("click", () => {
+        alert("⚠️ You are about to edit this row. Make sure to save your changes!");
         // Hitta raden (tr) som knappen finns i
         const row = btn.closest("tr");
   
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Gör alla input-fält redigerbara genom att ta bort "readonly"
         inputs.forEach((input) => {
           input.removeAttribute("readonly");
+          
         });
   
         // Dölj "Edit"-knappen
