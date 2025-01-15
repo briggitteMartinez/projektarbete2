@@ -16,7 +16,7 @@
   <%- include('./header') %>
     <!----------------------------------------------------->
     <!-- Sidebar -->
-    <!--TODO en fungerande sidebar-->
+    <!--TODO en fungerande sidebar kanske ändra menyn-->
     <aside class="w-64 bg-white text-gray-800 fixed top-0 left-0 h-full shadow-lg pt-16">
       <div class="p-4 text-2xl font-bold">
         SoleMates
@@ -41,8 +41,8 @@
     <!----------------------------------------------------->
     <!--MAIN-->
     <main class="bg-gray-100">
-      
-      <form id="addProductForm" method="POST" action="/add-product"
+      <!--TODO ändra action till api endpoint o redirecta nånstans -->
+      <form id="addProductForm" method="POST" action="/addProduct"
         class="max-w-lg mx-auto p-6 bg-white shadow-md rounded-md">
         <h2 class="text-2xl text-gray-700 text-center mb-4">Add New Product</h2>
         <div class="mb-4">
@@ -62,7 +62,7 @@
         <div class="mb-4">
           <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
           <textarea id="description" name="description"
-            class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 resize-none text-left"
             required></textarea>
         </div>
 

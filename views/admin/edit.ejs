@@ -18,7 +18,7 @@
   <%- include('./header') %>
     <div class="flex h-screen bg-gray-100">
       <!-- Sidebar -->
-       <!--TODO en fungerande sidebar-->
+      <!--TODO en fungerande sidebar-->
       <aside class="w-64 bg-white text-gray-800 fixed top-0 left-0 h-full shadow-lg pt-16">
         <div class="p-4 text-2xl font-bold">
           SoleMates
@@ -52,8 +52,8 @@
           </div>
 
           <!-- Product Table Dummy data-->
-           <!--TODO - lägg till edit knappar och gör varje felt redigerbar vid klick-->
-           <!-- TODO  - generera listan (TR)dynamiskt-->
+          <!--TODO - lägg till edit knappar och gör varje felt redigerbar vid klick-->
+          <!-- TODO  - generera listan (TR)dynamiskt-->
           <table class="min-w-full bg-white border border-gray-200 rounded-md">
             <thead>
               <tr class="border-b bg-gray-100">
@@ -78,28 +78,33 @@
                 </td>
               </tr>
               <!-- ny rad -->
-                           <!-- Example row -->
-            <tr class="border-b hover:bg-gray-50">
-              <td class="p-3">
-                <input type="text" name="productName" value="T-Shirt" class="w-full bg-transparent border-gray-300 focus:outline-none focus:border-purple-500" readonly>
-              </td>
-              <td class="p-3">
-                <input type="text" name="category" value="Women Clothes" class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
-              </td>
-              <td class="p-3">
-                <input type="text" name="color" value="Blue" class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
-              </td>
-              <td class="p-3">
-                <input type="number" name="price" value="79.80" class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
-              </td>
-              <td class="p-3">
-                <input type="number" name="stock" value="79" class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
-              </td>
-              <td class="p-3">
-                <button type="button" class="text-red-600 hover:underline edit-btn">Edit</button>
-                <button type="submit" class="text-green-600 hover:underline save-btn hidden">Save</button>
-              </td>
-            </tr>              
+              <!-- Example row -->
+              <tr class="border-b hover:bg-gray-50">
+                <td class="p-3">
+                  <input type="text" name="productName" value="T-Shirt"
+                    class="w-full bg-transparent border-gray-300 focus:outline-none focus:border-purple-500" readonly>
+                </td>
+                <td class="p-3">
+                  <input type="text" name="category" value="Women Clothes"
+                    class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
+                </td>
+                <td class="p-3">
+                  <input type="text" name="color" value="Blue"
+                    class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
+                </td>
+                <td class="p-3">
+                  <input type="number" name="price" value="79.80"
+                    class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
+                </td>
+                <td class="p-3">
+                  <input type="number" name="stock" value="79"
+                    class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
+                </td>
+                <td class="p-3">
+                  <button type="button" class="text-red-600 hover:underline edit-btn">Edit</button>
+                  <button type="submit" class="text-green-600 hover:underline save-btn hidden">Save</button>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
