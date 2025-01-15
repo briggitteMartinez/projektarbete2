@@ -1,15 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
-    <link href="/stylesheets/output.css" rel="stylesheet">
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    
-    <p class="text-yellow-500">Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link href="./stylesheets/output.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Header -->
+  <%- include('./header') %>
+    <div class="flex h-screen bg-gray-100">
+      <!-- Sidebar -->
+       <!--TODO en fungerande sidebar-->
+      <aside class="w-64 bg-white text-gray-800 fixed top-0 left-0 h-full shadow-lg pt-16">
+        <div class="p-4 text-2xl font-bold">
+          SoleMates
+        </div>
+        <nav class="mt-4">
+          <ul>
+            <li class="p-2 hover:bg-gray-700">
+              <a href="#" class="block">🎛️ Dashboard</a>
+            </li>
+            <li class="p-2 hover:bg-gray-700">
+              <a href="#" class="block">👟 Products</a>
+            </li>
+            <li class="p-2 hover:bg-gray-700">
+              <a href="#" class="block">🛒 Orders</a>
+            </li>
+            <li class="p-2 hover:bg-gray-700">
+              <a href="#" class="block">⚙️ Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="flex-1 ml-64 pt-16 p-4">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold">Products List</h2>
+            <button class="bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-purple-700">
+              + Add Product
+            </button>
+          </div>
+
+          <!-- Product Table Dummy data-->
+           <!--TODO lägg till edit knappar och gör varje felt redigerbar vid klick-->
+           <!-- TODO  generera listan (TR)dynamiskt-->
+          <table class="min-w-full bg-white border border-gray-200 rounded-md">
+            <thead>
+              <tr class="border-b bg-gray-100">
+                <th class="p-3 text-left">Product Name</th>
+                <th class="p-3 text-left">Category</th>
+                <th class="p-3 text-left">Color</th>
+                <th class="p-3 text-left">Price</th>
+                <th class="p-3 text-left">Stock</th>
+                <th class="p-3 text-left">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--Ändra till dynamisk lista-->
+              <tr class="border-b hover:bg-gray-50">
+                <td class="p-3">Foxy pumps</td>
+                <td class="p-3">Woman</td>
+                <td class="p-3">Black</td>
+                <td class="p-3">$100kr</td>
+                <td class="p-3">100</td>
+                <td class="p-3">
+                  <a href="#" class="text-purple-600 hover:underline">Details</a>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+</body>
+
 </html>
