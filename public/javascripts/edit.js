@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Gör alla input-fält redigerbara genom att ta bort "readonly"
         inputs.forEach((input) => {
           input.removeAttribute("readonly");
+          input.classList.add("hover:bg-gray-200");
           
         });
   
