@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <link href="./stylesheets/output.css" rel="stylesheet">
+  <script src="/javascripts/edit.js" defer></script>
 
 </head>
 
@@ -76,12 +77,33 @@
                   <a href="#" class="text-purple-600 hover:underline">Details</a>
                 </td>
               </tr>
-              
+              <!-- ny rad -->
+                           <!-- Example row -->
+            <tr class="border-b hover:bg-gray-50">
+              <td class="p-3">
+                <input type="text" name="productName" value="T-Shirt" class="w-full bg-transparent border-b border-gray-300 focus:outline-none focus:border-purple-500" readonly>
+              </td>
+              <td class="p-3">
+                <input type="text" name="category" value="Women Clothes" class="w-full bg-transparent border-b border-gray-300 focus:outline-none focus:border-purple-500" readonly>
+              </td>
+              <td class="p-3">
+                <input type="text" name="color" value="Blue" class="w-full bg-transparent border-b border-gray-300 focus:outline-none focus:border-purple-500" readonly>
+              </td>
+              <td class="p-3">
+                <input type="number" name="price" value="79.80" class="w-full bg-transparent border-b border-gray-300 focus:outline-none focus:border-purple-500" readonly>
+              </td>
+              <td class="p-3">
+                <input type="number" name="stock" value="79" class="w-full bg-transparent border-b border-gray-300 focus:outline-none focus:border-purple-500" readonly>
+              </td>
+              <td class="p-3">
+                <button type="button" class="text-blue-600 hover:underline edit-btn">Edit</button>
+                <button type="submit" class="text-green-600 hover:underline save-btn hidden">Save</button>
+              </td>
+            </tr>              
             </tbody>
           </table>
         </div>
       </div>
-
 
 </body>
 
