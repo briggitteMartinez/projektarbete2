@@ -8,9 +8,16 @@
     <link href="/stylesheets/output.css" rel="stylesheet">
   </head>
   <body>
+
     <form action="/user/search" method="get">
       <input type="text" name="q" placeholder="Search for products">
       <button type="submit">Search</button>
     </form>
+
+    <h1><%= title %></h1>
+    
+    <p class="text-yellow-500">Welcome to <%= title %></p>
+
+    <%- include("../views/user/footer.ejs"); %>
   </body>
 </html>

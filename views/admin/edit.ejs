@@ -1,15 +1,115 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
-    <link href="/stylesheets/output.css" rel="stylesheet">
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    
-    <p class="text-yellow-500">Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link href="./stylesheets/output.css" rel="stylesheet">
+  <script src="/javascripts/edit.js" defer></script>
+
+</head>
+
+<body>
+  <!-- Header -->
+  <%- include('./header') %>
+    <div class="flex h-screen bg-gray-100">
+      <!-- Sidebar -->
+      <!--TODO en fungerande sidebar-->
+      <aside class="w-64 bg-white text-gray-800 fixed top-0 left-0 h-full shadow-lg pt-16">
+        <div class="p-4 text-2xl font-bold">
+          SoleMates
+        </div>
+        <nav class="mt-4">
+          <ul>
+            <li class="p-2 hover:bg-gray-200">
+              <a href="#" class="block">🎛️ Dashboard</a>
+            </li>
+            <li class="p-2 hover:bg-gray-200">
+              <a href="#" class="block">👟 Products</a>
+            </li>
+            <li class="p-2 hover:bg-gray-200">
+              <a href="#" class="block">🛒 Orders</a>
+            </li>
+            <li class="p-2 hover:bg-gray-200">
+              <a href="#" class="block">⚙️ Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="flex-1 ml-64 pt-16 p-4">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold">Products List</h2>
+            <button class="bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-purple-700">
+              <a href="admin/new">+ Add Product</a>
+            </button>
+          </div>
+
+          <!-- Product Table Dummy data-->
+          <!--TODO - lägg till edit knappar och gör varje felt redigerbar vid klick-->
+          <!-- TODO  - generera listan (TR)dynamiskt-->
+          <table class="min-w-full bg-white border border-gray-200 rounded-md">
+            <thead>
+              <tr class="border-b bg-gray-100">
+                <th class="p-3 text-left">Product Name</th>
+                <th class="p-3 text-left">Category</th>
+                <th class="p-3 text-left">Color</th>
+                <th class="p-3 text-left">Price</th>
+                <th class="p-3 text-left">Stock</th>
+                <th class="p-3 text-left">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--Ändra till dynamisk lista-->
+              <tr class="border-b hover:bg-gray-50">
+                <td class="p-3">Foxy pumps</td>
+                <td class="p-3">Woman</td>
+                <td class="p-3">Black</td>
+                <td class="p-3">$100kr</td>
+                <td class="p-3">100</td>
+                <td class="p-3">
+                  <a href="#" class="text-purple-600 hover:underline">Details</a>
+                </td>
+              </tr>
+              <!-- ny rad -->
+              <!-- Example row -->
+              <tr class="border-b hover:bg-gray-50">
+                <td class="p-3">
+                  <input type="text" name="productName" value="T-Shirt"
+                    class="w-full bg-transparent border-gray-300 focus:outline-none focus:border-purple-500" readonly>
+                </td>
+                <td class="p-3">
+                  <input type="text" name="category" value="Women Clothes"
+                    class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
+                </td>
+                <td class="p-3">
+                  <input type="text" name="color" value="Blue"
+                    class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
+                </td>
+                <td class="p-3">
+                  <input type="number" name="price" value="79.80"
+                    class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
+                </td>
+                <td class="p-3">
+                  <input type="number" name="stock" value="79"
+                    class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
+                </td>
+                <td class="p-3">
+                  <button type="button" class="text-red-600 hover:underline edit-btn">Edit</button>
+                  <button type="submit" class="text-green-600 hover:underline save-btn hidden">Save</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+</body>
+
 </html>
