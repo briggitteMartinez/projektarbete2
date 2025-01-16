@@ -63,9 +63,3 @@ typings/
 
 # Tailwind output
 public\stylesheets\output.css
-
-# alla tailwind classer
-*.css
-!src/**/*.css
-public/stylesheets/output.css
-
