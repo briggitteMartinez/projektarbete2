@@ -1,0 +1,1 @@
+//TODO, hämta och skicka inputdata från new  post/fetch osv
