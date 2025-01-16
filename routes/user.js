@@ -17,4 +17,8 @@ router.get('/search', function(req, res, next) {
   });
 });
 
+router.get('/product-details', function(req, res, next) {
+  res.render('./user/details', { title: 'DETAILS' });
+});
+
 module.exports = router;
