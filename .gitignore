@@ -60,5 +60,12 @@ typings/
 # next.js build output
 .next
 
+
 # Tailwind output
 public\stylesheets\output.css
+
+# alla tailwind classer
+*.css
+!src/**/*.css
+public/stylesheets/output.css
+
