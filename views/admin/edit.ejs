@@ -66,34 +66,23 @@
               </tr>
             </thead>
             <tbody>
-              <!--Ändra till dynamisk lista-->
-              <tr class="border-b hover:bg-gray-50">
-                <td class="p-3">Foxy pumps</td>
-                <td class="p-3">Woman</td>
-                <td class="p-3">Black</td>
-                <td class="p-3">$100kr</td>
-                <td class="p-3">100</td>
-                <td class="p-3">
-                  <a href="#" class="text-purple-600 hover:underline">Details</a>
-                </td>
-              </tr>
-              <!-- ny rad -->
+              <% products.forEach(product => { %>
               <!-- Example row -->
               <tr class="border-b hover:bg-gray-50">
                 <td class="p-3">
-                  <input type="text" name="productName" value="T-Shirt"
+                  <input type="text" name="productName" value="<%= product.name %>"
                     class="w-full bg-transparent border-gray-300 focus:outline-none focus:border-purple-500" readonly>
                 </td>
                 <td class="p-3">
-                  <input type="text" name="category" value="Women Clothes"
+                  <input type="text" name="category" value="<%= product.category %>"
                     class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
                 </td>
                 <td class="p-3">
-                  <input type="text" name="color" value="Blue"
+                  <input type="text" name="color" value="<%= product.color %>"
                     class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
                 </td>
                 <td class="p-3">
-                  <input type="number" name="price" value="79.80"
+                  <input type="number" name="price" value="<%= product.price %>"
                     class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
                 </td>
                 <td class="p-3">
@@ -104,7 +93,14 @@
                   <button type="button" class="text-red-600 hover:underline edit-btn">Edit</button>
                   <button type="submit" class="text-green-600 hover:underline save-btn hidden">Save</button>
                 </td>
+                <!--
+                <td class="p-3">
+                        <a href="/edit/< %= product.id %>" class="text-blue-500 hover:underline">Edit</a>
+                        <a href="/delete/< %= product.id %>" class="text-red-500 hover:underline">Delete</a>
+                    </td>
+                    -->
               </tr>
+              <% }) %>
             </tbody>
           </table>
         </div>

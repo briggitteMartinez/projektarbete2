@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <link href="/stylesheets/output.css" rel="stylesheet">
+  <script src="/javascripts/new.js" defer></script>
 </head>
 
 <body>
@@ -42,7 +43,7 @@
     <!--MAIN-->
     <main class="bg-gray-100">
       <!--TODO ändra action till api endpoint o redirecta nånstans -->
-      <form id="addProductForm" method="POST" action="/addProduct"
+      <form id="addProductForm" method="POST" action="/api"
         class="max-w-lg mx-auto p-6 bg-white shadow-md rounded-md">
         <h2 class="text-2xl text-gray-700 text-center mb-4">Add New Product</h2>
         <div class="mb-4">
@@ -67,8 +68,20 @@
         </div>
 
         <div class="mb-4">
-          <label for="imageurl" class="block text-sm font-medium text-gray-700">Image URL</label>
-          <input type="url" id="imageurl" name="imageurl"
+          <label for="imageurl1" class="block text-sm font-medium text-gray-700">Image URL 1</label>
+          <input type="url" id="imageurl1" name="imageurl1"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            required />
+        </div>
+        <div class="mb-4">
+          <label for="imageurl2" class="block text-sm font-medium text-gray-700">Image URL 2</label>
+          <input type="url" id="imageurl2" name="imageurl2"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            required />
+        </div>
+        <div class="mb-4">
+          <label for="imageurl3" class="block text-sm font-medium text-gray-700">Image URL 3</label>
+          <input type="url" id="imageurl3" name="imageurl3"
             class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             required />
         </div>
@@ -104,14 +117,6 @@
             class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             required />
         </div>
-
-        <div class="mb-4">
-          <label for="sku" class="block text-sm font-medium text-gray-700">SKU</label>
-          <input type="text" id="sku" name="sku"
-            class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-            required />
-        </div>
-
         <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">Add
           Product</button>
       </form>
