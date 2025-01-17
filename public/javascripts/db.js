@@ -11,6 +11,8 @@ function searchProducts(query, callback) {
   }
 }
 
+
 module.exports = {
+  db: db,
   searchProducts: searchProducts
 };
