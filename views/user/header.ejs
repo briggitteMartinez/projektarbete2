@@ -2,11 +2,11 @@
   <nav class="container mx-auto py-4">
     <!-- Andra raden: Sökfält (centrerat) -->
     <div class="search-container flex justify-center mb-4">
-      <form class="relative w-full max-w-xl">
+      <form action="/user/search" method="get" class="relative w-full max-w-xl">
         <input
           type="text"
           placeholder="Sök..."
-          name="query"
+          name="q"
           required
           class="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-500"
         />

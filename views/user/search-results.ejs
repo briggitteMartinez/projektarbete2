@@ -8,16 +8,40 @@
     <link href="/stylesheets/output.css" rel="stylesheet">
   </head>
   <body>
-    <h1><%= title %></h1>
+
+    <%- include('./header.ejs'); %>
+
+
+    <h1 class="flex justify-center items-center text-sm font-medium text-gray-500 dark:text-gray-600"><%= title %></h1>
     
     <% if (products.length > 0) { %>
-      <ul>
-        <% products.forEach(function(product) { %>
-          <li><%= product.name %> - <%= product.description %></li>
-        <% }); %>
-      </ul>
+      <table class="table-auto w-full text-sm font-medium my-9">
+        <thead>
+          <tr class="border-2">
+        <th class="px-4 py-2 text-left">Name</th>
+        <th class="px-4 py-2 text-left">Description</th>
+        <th class="px-4 py-2 text-left">Category</th>
+        <th class="px-4 py-2 text-left">Brand</th>
+        <th class="px-4 py-2 text-left">Color</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% products.forEach(function(product) { %>
+        <tr>
+          <td class="px-4 py-2"><a href="/user/<%= product.slug %>"><%= product.name.charAt(0).toUpperCase() + product.name.slice(1) %></a></td>
+          <td class="px-4 py-2"><%= product.description %></td>
+          <td class="px-4 py-2"><%= product.category %></td>
+          <td class="px-4 py-2"><%= product.brand %></td>
+          <td class="px-4 py-2"><%= product.color %></td>
+        </tr>
+          <% }); %>
+        </tbody>
+      </table>
     <% } else { %>
       <p>No products found.</p>
     <% } %>
+
+    <%- include("./footer.ejs"); %>
+
   </body>
 </html>
