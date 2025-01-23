@@ -8,10 +8,29 @@
     <link href="/stylesheets/output.css" rel="stylesheet">
   </head>
   <body>
-    <h1><%= title %></h1>
+    <%- include("./header.ejs"); %>
     
-    <p class="text-yellow-500">Welcome to <%= title %></p>
 
-    <%- include("../views/user/footer.ejs"); %>
+    <main class="bg-gray-200 p-6 rounded-md shadow-lg flex">
+      <div>
+        <div class="flex-1">
+          <img src=<%= product.image %> alt="">
+        </div>
+      </div>
+      <div class="flex-1 p-6 space-y-4">
+        <h3 class="text-2xl font-bold"><%= product.name %></h3>
+        <p class="text-lg font-medium"><%= product.brand %></p>
+        <p class="text-gray-700">
+          <%= product.description %>
+        </p>
+        <p class="text-xl font-semibold"><%= product.price %> SEK</p>
+        <button class="bg-gray-600 text-white py-2 px-4 rounded shadow hover:bg-gray-700">
+          Lägg i varukorg
+        </button>
+      </div>
+    </main>
+
+    <%- include("./footer.ejs"); %>
+
   </body>
 </html>

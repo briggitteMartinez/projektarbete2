@@ -49,8 +49,8 @@ readJsonFile(jsonFilePath)
   });
 function searchProducts(query, callback) {
   try {
-    const stmt = db.prepare('SELECT * FROM productDetails WHERE name LIKE ? OR description LIKE ?');
-    const results = stmt.all(`%${query}%`, `%${query}%`);
+    const stmt = db.prepare('SELECT * FROM productDetails WHERE name LIKE ? OR description LIKE ? OR category LIKE ? OR brand LIKE ? OR color LIKE ?');
+    const results = stmt.all(`%${query}%`, `%${query}%`, `${query}%`, `%${query}%`, `%${query}%`);
     callback(null, results);
   } catch (err) {
     callback(err);
@@ -84,7 +84,6 @@ function importProducts(products) {
 
  
 }
-
 
 module.exports = {
   db: db,

@@ -1,0 +1,87 @@
+<header class="bg-white">
+  <nav class="container mx-auto py-4">
+    <!-- Andra raden: Sökfält (centrerat) -->
+    <div class="search-container flex justify-center mb-4">
+      <form action="/user/search" method="get" class="relative w-full max-w-xl">
+        <input
+          type="text"
+          placeholder="Sök..."
+          name="q"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-500"
+        />
+        <button
+          type="submit"
+          class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="w-5 h-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M11 3a8 8 0 100 16 8 8 0 000-16zM21 21l-4.35-4.35"
+            />
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- Första raden: Logotyp, meny och ikoner (under sökfältet) -->
+    <div class="flex items-center justify-between">
+      <!-- Logotyp -->
+      <div class="logo">
+        <a href="/">
+          <img
+            src="/stylesheets/Images/SoleMates-logo.png"
+            alt="Brand Logo"
+            class="h-24"
+          />
+        </a>
+      </div>
+
+      <!-- Meny -->
+      <ul class="flex space-x-8 text-gray-700 font-medium">
+        <li><a href="/dam" class="hover:text-black">Dam</a></li>
+        <li><a href="/herr" class="hover:text-black">Herr</a></li>
+        <li><a href="/barn" class="hover:text-black">Barn</a></li>
+        <li><a href="/rea" class="hover:text-black">Rea</a></li>
+      </ul>
+
+      <!-- Ikoner -->
+      <div class="icons flex items-center space-x-6">
+        <!-- Hjärtikon -->
+        <a href="/heart">
+          <img
+            src="/stylesheets/Images/SoleMates-heart.png"
+            alt="Hjärta"
+            class="h-6 w-6"
+          />
+        </a>
+
+        <!-- Användarikon -->
+        <a href="/dude">
+          <img
+            src="/stylesheets/Images/SoleMates-dude.png"
+            alt="Användare"
+            class="h-6 w-6"
+          />
+        </a>
+
+        <!-- Varukorg -->
+        <a href="/cart">
+          <img
+            src="/stylesheets/Images/SoleMates-basket.png"
+            alt="Varukorg"
+            class="h-6 w-6"
+          />
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
