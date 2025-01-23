@@ -1,0 +1,342 @@
+[
+    {
+        "id": 1,
+        "name": "Adidas Ultra Boost",
+        "price": 887.46,
+        "description": "Stylish pumps with the iconic red sole.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+1",
+            "https://placehold.co/200x300?text=Shoe+1+Alt1",
+            "https://placehold.co/200x300?text=Shoe+1+Alt2"
+        ],
+        "category": "Men",
+        "size": 36,
+        "color": "Black",
+        "brand": "Adidas",
+        "sku": "SKU-5669-EP",
+        "slug": "adidas-ultra-boost-sku-5669-ep"
+    },
+    {
+        "id": 2,
+        "name": "Christian Louboutin Pumps",
+        "price": 800.29,
+        "description": "Stylish pumps with the iconic red sole.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+2",
+            "https://placehold.co/200x300?text=Shoe+2+Alt1",
+            "https://placehold.co/200x300?text=Shoe+2+Alt2"
+        ],
+        "category": "Men",
+        "size": 37,
+        "color": "Black",
+        "brand": "Vagabond",
+        "sku": "SKU-2285-MN",
+        "slug": "christian-louboutin-pumps-sku-2285-mn"
+    },
+    {
+        "id": 3,
+        "name": "Christian Louboutin Pumps",
+        "price": 393.33,
+        "description": "Comfortable and stylish summer sandals.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+3",
+            "https://placehold.co/200x300?text=Shoe+3+Alt1",
+            "https://placehold.co/200x300?text=Shoe+3+Alt2"
+        ],
+        "category": "Women",
+        "size": 39,
+        "color": "Gray",
+        "brand": "Vagabond",
+        "sku": "SKU-6932-ZY",
+        "slug": "christian-louboutin-pumps-sku-6932-zy"
+    },
+    {
+        "id": 4,
+        "name": "Tamaris Sandals",
+        "price": 557.32,
+        "description": "A lightweight and comfortable running shoe.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+4",
+            "https://placehold.co/200x300?text=Shoe+4+Alt1",
+            "https://placehold.co/200x300?text=Shoe+4+Alt2"
+        ],
+        "category": "Women",
+        "size": 45,
+        "color": "White",
+        "brand": "Jimmy Choo",
+        "sku": "SKU-3096-ET",
+        "slug": "tamaris-sandals-sku-3096-et"
+    },
+    {
+        "id": 5,
+        "name": "Tamaris Sandals",
+        "price": 257.08,
+        "description": "Comfortable and stylish summer sandals.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+5",
+            "https://placehold.co/200x300?text=Shoe+5+Alt1",
+            "https://placehold.co/200x300?text=Shoe+5+Alt2"
+        ],
+        "category": "Women",
+        "size": 42,
+        "color": "White",
+        "brand": "Adidas",
+        "sku": "SKU-3974-LT",
+        "slug": "tamaris-sandals-sku-3974-lt"
+    },
+    {
+        "id": 6,
+        "name": "Reebok Classic",
+        "price": 276.52,
+        "description": "Boost your performance with style.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+6",
+            "https://placehold.co/200x300?text=Shoe+6+Alt1",
+            "https://placehold.co/200x300?text=Shoe+6+Alt2"
+        ],
+        "category": "Men",
+        "size": 45,
+        "color": "Brown",
+        "brand": "Puma",
+        "sku": "SKU-4503-YA",
+        "slug": "reebok-classic-sku-4503-ya"
+    },
+    {
+        "id": 7,
+        "name": "Gucci Loafers",
+        "price": 275.46,
+        "description": "Boost your performance with style.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+7",
+            "https://placehold.co/200x300?text=Shoe+7+Alt1",
+            "https://placehold.co/200x300?text=Shoe+7+Alt2"
+        ],
+        "category": "Children",
+        "size": 40,
+        "color": "Gray",
+        "brand": "Reebok",
+        "sku": "SKU-1330-JY",
+        "slug": "gucci-loafers-sku-1330-jy"
+    },
+    {
+        "id": 8,
+        "name": "Nike Air Max",
+        "price": 95.9,
+        "description": "Classic skate shoes for every occasion.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+8",
+            "https://placehold.co/200x300?text=Shoe+8+Alt1",
+            "https://placehold.co/200x300?text=Shoe+8+Alt2"
+        ],
+        "category": "Children",
+        "size": 42,
+        "color": "Red",
+        "brand": "Tamaris",
+        "sku": "SKU-5355-SP",
+        "slug": "nike-air-max-sku-5355-sp"
+    },
+    {
+        "id": 9,
+        "name": "Adidas Ultra Boost",
+        "price": 741.66,
+        "description": "Stylish pumps with the iconic red sole.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+9",
+            "https://placehold.co/200x300?text=Shoe+9+Alt1",
+            "https://placehold.co/200x300?text=Shoe+9+Alt2"
+        ],
+        "category": "Men",
+        "size": 40,
+        "color": "Green",
+        "brand": "Vagabond",
+        "sku": "SKU-3175-SB",
+        "slug": "adidas-ultra-boost-sku-3175-sb"
+    },
+    {
+        "id": 10,
+        "name": "Reebok Classic",
+        "price": 796.06,
+        "description": "Timeless design for everyday comfort.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+10",
+            "https://placehold.co/200x300?text=Shoe+10+Alt1",
+            "https://placehold.co/200x300?text=Shoe+10+Alt2"
+        ],
+        "category": "Men",
+        "size": 43,
+        "color": "Green",
+        "brand": "Vans",
+        "sku": "SKU-7473-UK",
+        "slug": "reebok-classic-sku-7473-uk"
+    },
+    {
+        "id": 11,
+        "name": "Adidas Ultra Boost",
+        "price": 588.28,
+        "description": "Timeless design for everyday comfort.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+11",
+            "https://placehold.co/200x300?text=Shoe+11+Alt1",
+            "https://placehold.co/200x300?text=Shoe+11+Alt2"
+        ],
+        "category": "Children",
+        "size": 35,
+        "color": "Green",
+        "brand": "Puma",
+        "sku": "SKU-1173-EF",
+        "slug": "adidas-ultra-boost-sku-1173-ef"
+    },
+    {
+        "id": 12,
+        "name": "Gucci Loafers",
+        "price": 75.03,
+        "description": "Classic skate shoes for every occasion.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+12",
+            "https://placehold.co/200x300?text=Shoe+12+Alt1",
+            "https://placehold.co/200x300?text=Shoe+12+Alt2"
+        ],
+        "category": "Women",
+        "size": 45,
+        "color": "Green",
+        "brand": "Christian Louboutin",
+        "sku": "SKU-8267-EC",
+        "slug": "gucci-loafers-sku-8267-ec"
+    },
+    {
+        "id": 13,
+        "name": "Gucci Loafers",
+        "price": 583.52,
+        "description": "Classic skate shoes for every occasion.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+13",
+            "https://placehold.co/200x300?text=Shoe+13+Alt1",
+            "https://placehold.co/200x300?text=Shoe+13+Alt2"
+        ],
+        "category": "Women",
+        "size": 37,
+        "color": "Gray",
+        "brand": "Tamaris",
+        "sku": "SKU-7045-WJ",
+        "slug": "gucci-loafers-sku-7045-wj"
+    },
+    {
+        "id": 14,
+        "name": "Reebok Classic",
+        "price": 807.33,
+        "description": "Classic skate shoes for every occasion.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+14",
+            "https://placehold.co/200x300?text=Shoe+14+Alt1",
+            "https://placehold.co/200x300?text=Shoe+14+Alt2"
+        ],
+        "category": "Men",
+        "size": 45,
+        "color": "Black",
+        "brand": "Puma",
+        "sku": "SKU-4476-EB",
+        "slug": "reebok-classic-sku-4476-eb"
+    },
+    {
+        "id": 15,
+        "name": "Adidas Ultra Boost",
+        "price": 545.8,
+        "description": "Versatile sneakers for everyday wear.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+15",
+            "https://placehold.co/200x300?text=Shoe+15+Alt1",
+            "https://placehold.co/200x300?text=Shoe+15+Alt2"
+        ],
+        "category": "Women",
+        "size": 37,
+        "color": "Pink",
+        "brand": "Jimmy Choo",
+        "sku": "SKU-3501-KN",
+        "slug": "adidas-ultra-boost-sku-3501-kn"
+    },
+    {
+        "id": 16,
+        "name": "Christian Louboutin Pumps",
+        "price": 199.91,
+        "description": "Boost your performance with style.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+16",
+            "https://placehold.co/200x300?text=Shoe+16+Alt1",
+            "https://placehold.co/200x300?text=Shoe+16+Alt2"
+        ],
+        "category": "Children",
+        "size": 39,
+        "color": "Black",
+        "brand": "Gucci",
+        "sku": "SKU-1745-RE",
+        "slug": "christian-louboutin-pumps-sku-1745-re"
+    },
+    {
+        "id": 17,
+        "name": "Adidas Ultra Boost",
+        "price": 303.49,
+        "description": "Classic skate shoes for every occasion.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+17",
+            "https://placehold.co/200x300?text=Shoe+17+Alt1",
+            "https://placehold.co/200x300?text=Shoe+17+Alt2"
+        ],
+        "category": "Children",
+        "size": 41,
+        "color": "Brown",
+        "brand": "Vagabond",
+        "sku": "SKU-8249-WQ",
+        "slug": "adidas-ultra-boost-sku-8249-wq"
+    },
+    {
+        "id": 18,
+        "name": "Puma RS-X",
+        "price": 568.86,
+        "description": "Stylish pumps with the iconic red sole.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+18",
+            "https://placehold.co/200x300?text=Shoe+18+Alt1",
+            "https://placehold.co/200x300?text=Shoe+18+Alt2"
+        ],
+        "category": "Men",
+        "size": 37,
+        "color": "Pink",
+        "brand": "Vagabond",
+        "sku": "SKU-6292-IC",
+        "slug": "puma-rs-x-sku-6292-ic"
+    },
+    {
+        "id": 19,
+        "name": "Tamaris Sandals",
+        "price": 258.48,
+        "description": "A lightweight and comfortable running shoe.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+19",
+            "https://placehold.co/200x300?text=Shoe+19+Alt1",
+            "https://placehold.co/200x300?text=Shoe+19+Alt2"
+        ],
+        "category": "Men",
+        "size": 36,
+        "color": "Green",
+        "brand": "Adidas",
+        "sku": "SKU-6501-KJ",
+        "slug": "tamaris-sandals-sku-6501-kj"
+    },
+    {
+        "id": 20,
+        "name": "Adidas Ultra Boost",
+        "price": 476.98,
+        "description": "Elegant heels for special occasions.",
+        "image": [
+            "https://placehold.co/200x300?text=Shoe+20",
+            "https://placehold.co/200x300?text=Shoe+20+Alt1",
+            "https://placehold.co/200x300?text=Shoe+20+Alt2"
+        ],
+        "category": "Children",
+        "size": 37,
+        "color": "Red",
+        "brand": "Reebok",
+        "sku": "SKU-5907-AN",
+        "slug": "adidas-ultra-boost-sku-5907-an"
+    }
+]
