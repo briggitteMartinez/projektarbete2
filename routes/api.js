@@ -2,7 +2,9 @@
 // Innehåller rutter för att hämta och lägga till produkter i databasen
 var express = require('express');
 var router = express.Router();
-const { db } = require('../public/javascripts/db'); // Uppdatera sökvägen till db.js
+var { db, importProducts } = require('../public/javascripts/db'); // Importera databasen och importfunktionen
+
+
 
 // GET // Hämta produkter från databasen
 router.get('/', (req, res) => {
@@ -13,6 +15,23 @@ router.get('/', (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+// POST /api/import - Tar emot JSON-data och lägger in i databasen
+router.post('/import', (req, res) => {
+  try {
+    const products = req.body; // Hämta JSON-data från förfrågan
+    console.log('Mottagen JSON:', products);
+
+    // Importera datan till databasen
+    importProducts(products);
+
+    res.status(201).json({ message: 'Produkter importerades framgångsrikt!' });
+  } catch (err) {
+    console.error('Fel vid import:', err.message);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
 
 // POST // Lägg till en ny produkt i databasen och returnera den lagrade datan
 router.post('/', (req, res) => {
@@ -26,7 +45,6 @@ router.post('/', (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-
 
 // GET // Hämta produkter och rendera edit.ejs
 router.get('/edit', (req, res) => {
