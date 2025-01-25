@@ -30,8 +30,6 @@ router.get('/:slug', function(req, res, next) {
   const product = select.get(slug);
   product.image = JSON.parse(product.image);
 
-  // 2 - Kör SQL-kommandot för att hämta products
-
   const selectRandom = data.prepare(`
       SELECT id,
              name,
