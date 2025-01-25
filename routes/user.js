@@ -41,7 +41,6 @@ router.get('/:slug', function(req, res, next) {
        ORDER BY RANDOM()
        LIMIT 3
     `);
-    console.log("randomRows1 => " , selectRandom.all());
 
   const randomRows = selectRandom.all();
   randomRows.forEach(row => {
