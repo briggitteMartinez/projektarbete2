@@ -6,39 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css'/>
     <link href="/stylesheets/output.css" rel="stylesheet">
+    <script src="/javascripts/search-results.js"></script>
   </head>
   <body>
 
     <%- include('./header.ejs'); %>
 
-
-    <h1 class="flex justify-center items-center text-sm font-medium text-gray-500 dark:text-gray-600"><%= title %></h1>
-    
     <% if (products.length > 0) { %>
-      <table class="table-auto w-full text-sm font-medium my-9">
-        <thead>
-          <tr class="border-2">
-        <th class="px-4 py-2 text-left">Name</th>
-        <th class="px-4 py-2 text-left">Description</th>
-        <th class="px-4 py-2 text-left">Category</th>
-        <th class="px-4 py-2 text-left">Brand</th>
-        <th class="px-4 py-2 text-left">Color</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% products.forEach(function(product) { %>
-        <tr>
-          <td class="px-4 py-2"><a href="/user/<%= product.slug %>"><%= product.name.charAt(0).toUpperCase() + product.name.slice(1) %></a></td>
-          <td class="px-4 py-2"><%= product.description %></td>
-          <td class="px-4 py-2"><%= product.category %></td>
-          <td class="px-4 py-2"><%= product.brand %></td>
-          <td class="px-4 py-2"><%= product.color %></td>
-        </tr>
-          <% }); %>
-        </tbody>
-      </table>
+      <h1 class="flex justify-center items-center p-6 text-sm font-medium text-gray-500 dark:text-gray-600"><%= title %></h1>
+
+      <div class="flex flex-col mb-4">
+        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="overflow-hidden shadow-md sm:rounded-lg">
+              <table class="min-w-full table" data-sort-order="asc">
+                <thead class="bg-gray-200">
+                  <tr>
+                    <th
+                      class="px-4 py-2 text-left cursor-pointer hover:bg-gray-300"
+                      onclick="sortTable(0, 'table')"
+                    >
+                      Name <span id="arrow-0"></span>
+                    </th>
+                    <th
+                      class="px-4 py-2 text-left cursor-pointer hover:bg-gray-300"
+                      onclick="sortTable(1, 'table')"
+                    >
+                      Description <span id="arrow-1"></span>
+                    </th>
+                    <th
+                      class="px-4 py-2 text-left cursor-pointer hover:bg-gray-300"
+                      onclick="sortTable(2, 'table')"
+                    >
+                      Category <span id="arrow-2"></span>
+                    </th>
+                    <th
+                      class="px-4 py-2 text-left cursor-pointer hover:bg-gray-300"
+                      onclick="sortTable(3, 'table')"
+                    >
+                      Brand <span id="arrow-3"></span>
+                    </th>
+                    <th
+                      class="px-4 py-2 text-left cursor-pointer hover:bg-gray-300"
+                      onclick="sortTable(4, 'table')"
+                    >
+                      Price <span id="arrow-4"></span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% products.forEach(function(product) { %>
+                    <tr class="bg-white border-b">
+                      <td class="px-4 py-2 text-center font-semibold">
+                        <div class="flex items-center">
+                          <a href="<%= product.slug %>">
+                            <img class="w-full py-2 bg-white rounded-lg shadow dark:bg-gray-900 border-2 border-gray-700" src="<%= product.image[0] %>" alt="<%= product.name %>">
+                          </a>
+                          <span class="ml-4"><a href="<%= product.slug %>"><%= product.name %></a></span>
+                        </div>
+                      </td>
+                      <td class="px-4 py-2"><%= product.description %></td>
+                      <td class="px-4 py-2"><%= product.category %></td>
+                      <td class="px-4 py-2"><%= product.brand %></td>
+                      <td class="px-4 py-2"><%= product.price %></td>
+                    </tr>
+                  <% }); %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     <% } else { %>
-      <p>No products found.</p>
+      <p class="text-center text-lg font-semibold text-black mb-[2rem]">No products found.</p>
     <% } %>
 
     <%- include("./footer.ejs"); %>
