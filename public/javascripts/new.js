@@ -1,41 +1,6 @@
 const form = document.querySelector('form');
 const imgSeparator = ",";
 
-// Hämta JSON-filen från servern
-// fetch(jsonFileUrl)
-//   .then(response => {
-//     if (!response.ok) {
-//         console.log("fel fel fel");
-//       throw new Error(`HTTP-fel: ${response.status}`);
-      
-//     }
-//     console.log("json är hämtadddd");
-//     return response.json();
-//   })
-//   .then(products => {
-//     console.log('Fetched JSON:', products); 
-
-//     // Skicka JSON-datan till servern
-//     return fetch('api/import', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify(products), // Skicka JSON-datan
-//     });
-//   })
-//   .then(response => {
-//     if (response.ok) {
-//       console.log('Produkter importerades framgångsrikt!');
-//     } else {
-//       return response.json().then(err => {
-//         console.error('Fel vid import:', err);
-//       });
-//     }
-//   })
-//   .catch(error => {
-//     console.error('Fel:', error);
-//   });
 
  
 form.addEventListener('submit', (e) => { // Lägger till en händelselyssnare för formulärets submit-event

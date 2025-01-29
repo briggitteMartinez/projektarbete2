@@ -63,7 +63,7 @@ function importProducts(products) {
     
   const stmt = db.prepare(
     `
-    INSERT OR REPLACE INTO productDetails 
+    INSERT OR IGNORE INTO productDetails 
     (id, name, price, description, image, category, size, color, brand, sku, slug) 
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `);
@@ -81,12 +81,58 @@ function importProducts(products) {
       product.slug
     );
   });
-
- 
 }
+
+// Funktion för att uppdatera en produkt i databasen
+function updateProduct(id, productName, category, price, color) {
+  try {
+    console.log("Updating product with ID:", id);
+    console.log("New values:", { productName, category, price, color });
+
+    const stmt = db.prepare(
+      "UPDATE productDetails SET name = ?, category = ?, price = ?, color = ? WHERE id = ?"
+    );
+    const result = stmt.run(productName, category, price, color, id);
+
+    if (result.changes === 0) {
+      console.log("No product found with ID:", id);
+      return null; // Ingen uppdatering gjordes
+    }
+
+    // Hämta den uppdaterade produkten
+    return db.prepare("SELECT * FROM productDetails WHERE id = ?").get(id);
+  } catch (err) {
+    console.error("Error updating product:", err.message);
+    throw err;
+  }
+}
+
+//Funktion för att radera en produkt från databasen
+function deleteProduct(id) {
+  try {
+    console.log("Deleting product with ID:", id);
+
+    const stmt = db.prepare("DELETE FROM productDetails WHERE id = ?");
+    const result = stmt.run(id);
+
+    if (result.changes === 0) {
+      console.log("No product found with ID:", id);
+      return null;
+    }
+
+    return true;
+  } catch (err) {
+    console.error("Error deleting product:", err.message);
+    throw err;
+  }
+}
+
+
 
 module.exports = {
   db: db,
   searchProducts: searchProducts,
-  importProducts: importProducts
+  importProducts: importProducts,
+  updateProduct,
+  deleteProduct
 };
