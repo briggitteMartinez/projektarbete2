@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoleMates | Rea</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link href="/stylesheets/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-white">
+    <!-- Include the header -->
+    <%- include("header.ejs"); %>
+
+    <!-- Hero Section -->
+    <section
+      class="flex items-center justify-center h-screen bg-red-600 text-white text-6xl font-bold"
+    >
+      REA
+    </section>
+
+    <!-- Include the footer -->
+    <%- include("footer.ejs"); %>
+    <script>
+      const hamburgerMenu = document.getElementById("hamburger-menu");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburgerMenu.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+      });
+    </script>
+  </body>
+</html>

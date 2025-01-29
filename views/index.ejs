@@ -1,15 +1,110 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
-    <link href="/stylesheets/output.css" rel="stylesheet">
+    <title>SoleMates</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link href="/stylesheets/output.css" rel="stylesheet" />
   </head>
   <body>
     <%- include("../views/user/header.ejs"); %>
 
+   <div class="bg-gray-100 py-8"> 
+  <div
+    class="container mx-auto px-6 py-4 my-4 flex flex-col lg:flex-row items-center lg:justify-between gap-12"
+  
+        <!-- Textdel -->
+        <div class="lg:w-1/2 text-left lg:text-left">
+          <h1
+            class="text-6xl font-bold text-gray-900 mb-6"
+            style="font-size: 2rem"
+          >
+            Shoes for all seasons!
+          </h1>
+          <p class="text-gray-700 text-sm mb-6">
+            Our Scandinavian Shoe Guides provide tips for choosing the perfect
+            footwear for every season and weather condition in Sweden, Norway,
+            and Denmark.
+          </p>
+          <button
+            class="bg-white border-2 border-gray-900 text-gray-900 px-4 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition"
+          >
+            <span class="flex items-center justify-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 4v16m8-8H4"
+                />
+              </svg>
+              Call To Action
+            </span>
+          </button>
+        </div>
+
+        <!-- Bilddel -->
+        <div class="lg:w-1/2 flex justify-end">
+          
+          <img
+            src="/stylesheets/Images/SoleMates-allShoes.png"
+            alt="Shoe Image"
+            class="w-full h-auto lg:h-[500px] object-cover shadow-lg "
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+    <!-- Produktkort-container -->
+    <div class="container mx-auto px-2 py-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+        <% products.forEach(function(product) { %>
+        <div class="bg-white-100 p-6 relative">
+         
+          <!-- Produktbild -->
+          <img
+  src="<%= product.image[0] %>"
+  alt="<%= product.name %>"
+  class="w-full h-43 object-cover border mb-4"
+/>
+
+          <!-- Produktinfo -->
+          <h2 class="text-center text-xs font-semibold mt-2 mb-2">
+            <%= product.name %>
+          </h2>
+
+          <div class="absolute bottom-2 left-4 text-xs font-bold text-gray-900 mt-2 mb-2">
+            <span><%= product.category %></span>
+         
+          </div>
+
+          <div
+            class="absolute bottom-4 right-4 text-xs font-bold text-gray-900"
+          >
+            $<%= product.price %>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
     <%- include("../views/user/footer.ejs"); %>
+    <script>
+      const hamburgerMenu = document.getElementById("hamburger-menu");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburgerMenu.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+      });
+    </script>
   </body>
 </html>
