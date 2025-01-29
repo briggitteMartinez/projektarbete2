@@ -60,9 +60,9 @@
                       <td class="px-4 py-2 text-center font-semibold">
                         <div class="flex items-center">
                           <a href="<%= product.slug %>">
-                            <img class="w-full py-2 bg-white rounded-lg shadow dark:bg-gray-900 border-2 border-gray-700" src="<%= product.image[0] %>" alt="<%= product.name %>">
+                            <img class="w-full py-2 bg-white rounded-lg dark:bg-gray-900 border-2 border-gray-400 dark:border-gray-700 hover:opacity-80 shadow-lg" src="<%= product.image[0] %>" alt="<%= product.name %>">
                           </a>
-                          <span class="ml-4"><a href="<%= product.slug %>"><%= product.name %></a></span>
+                          <span class="ml-4 hover:underline"><a href="<%= product.slug %>"><%= product.name %></a></span>
                         </div>
                       </td>
                       <td class="px-4 py-2"><%= product.description %></td>
