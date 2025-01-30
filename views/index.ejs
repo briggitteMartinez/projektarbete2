@@ -71,12 +71,12 @@
         <div class="bg-white-100 p-6 relative">
          
           <!-- Produktbild -->
-          <img
+          <a href="/user/<%= product.slug %>"><img 
   src="<%= product.image[0] %>"
   alt="<%= product.name %>"
   class="w-full h-43 object-cover border mb-4"
 />
-
+</a>
           <!-- Produktinfo -->
           <h2 class="text-center text-xs font-semibold mt-2 mb-2">
             <%= product.name %>
