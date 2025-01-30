@@ -62,7 +62,7 @@ typings/
 
 
 # Tailwind output
-public\stylesheets\output.css
-
+public/stylesheets/output.css
 #DB
 DB/products.db
+
