@@ -20,34 +20,34 @@
           <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
             <div class="overflow-hidden shadow-md sm:rounded-lg">
               <table class="min-w-full table" data-sort-order="asc">
-                <thead class="bg-gray-200">
+                <thead class="bg-gray-200 dark:bg-gray-900 border-4 border-gray-300 dark:border-gray-700">
                   <tr>
                     <th
-                      class="px-4 py-2 text-left cursor-pointer hover:bg-gray-300"
+                      class="px-4 py-2 text-left cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 dark:text-gray-400"
                       onclick="sortTable(0, 'table')"
                     >
                       Name <span id="arrow-0"></span>
                     </th>
                     <th
-                      class="px-4 py-2 text-left cursor-pointer hover:bg-gray-300"
+                      class="px-4 py-2 text-left cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 dark:text-gray-400"
                       onclick="sortTable(1, 'table')"
                     >
                       Description <span id="arrow-1"></span>
                     </th>
                     <th
-                      class="px-4 py-2 text-left cursor-pointer hover:bg-gray-300"
+                      class="px-4 py-2 text-left cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 dark:text-gray-400"
                       onclick="sortTable(2, 'table')"
                     >
                       Category <span id="arrow-2"></span>
                     </th>
                     <th
-                      class="px-4 py-2 text-left cursor-pointer hover:bg-gray-300"
+                      class="px-4 py-2 text-left cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 dark:text-gray-400"
                       onclick="sortTable(3, 'table')"
                     >
                       Brand <span id="arrow-3"></span>
                     </th>
                     <th
-                      class="px-4 py-2 text-left cursor-pointer hover:bg-gray-300"
+                      class="px-4 py-2 text-left cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 dark:text-gray-400"
                       onclick="sortTable(4, 'table')"
                     >
                       Price <span id="arrow-4"></span>
@@ -57,12 +57,12 @@
                 <tbody>
                   <% products.forEach(function(product) { %>
                     <tr class="bg-white border-b">
-                      <td class="px-4 py-2 text-center font-semibold">
-                        <div class="flex items-center">
-                          <a href="<%= product.slug %>">
-                            <img class="w-full py-2 bg-white rounded-lg dark:bg-gray-900 border-2 border-gray-400 dark:border-gray-700 hover:opacity-80 shadow-lg" src="<%= product.image[0] %>" alt="<%= product.name %>">
+                      <td class="px-4 py-2 font-semibold">
+                        <div class="flex items-center space-x-4">
+                          <a href="<%= product.slug %>" class="flex-1">
+                            <img class="w-1/2 h-full object-cover py-2 shadow-lg bg-gray-200 rounded-lg dark:bg-gray-900 border-2 border-gray-200 hover:bg-gray-300 dark:border-gray-700 dark:hover:bg-gray-600" src="<%= product.image[0] %>" alt="<%= product.name %>">
                           </a>
-                          <span class="ml-4 hover:underline"><a href="<%= product.slug %>"><%= product.name %></a></span>
+                          <div class="flex-1 hover:underline"><a href="<%= product.slug %>"><%= product.name %></a></div>
                         </div>
                       </td>
                       <td class="px-4 py-2"><%= product.description %></td>
