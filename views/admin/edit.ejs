@@ -20,10 +20,14 @@
       <!-- Sidebar -->
       <!--TODO en fungerande sidebar-->
       <aside class="w-64 bg-white text-gray-800 fixed top-0 left-0 h-full shadow-lg pt-16">
-        <div class="p-4 text-2xl font-bold">
-          SoleMates
+        <!-- Logotyp -->
+        <div class="p-4">
+          <a href="/">
+            <img src="/stylesheets/Images/SoleMates-logo.png" alt="Brand Logo" class="h-32" />
+          </a>
         </div>
-        <nav class="mt-4">
+        <!--Navbar-->
+        <nav class="mt-8 text-xl ml-4 font-serif">
           <ul>
             <li class="p-2 hover:bg-gray-200">
               <a href="#" class="block">🎛️ Dashboard</a>
@@ -45,8 +49,8 @@
       <div class="flex-1 ml-64 pt-16 p-4">
         <div class="bg-white p-6 rounded-lg shadow-md">
           <div class="flex justify-between items-center mb-4">
-            <h2 class="text-xl font-bold">Products List</h2>
-            <button class="font-bold bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-300">
+            <h2 class="text-2xl font-serif">Products List</h2>
+            <button class="font-bold bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-500">
               <a href="admin/new">+ Add Product</a>
             </button>
           </div>
@@ -64,44 +68,53 @@
               </tr>
             </thead>
             <tbody>
-              <% products.forEach(product => { %>
-              <!-- Example row -->
-              <tr data-id="<%= product.id %>" class="border-b hover:bg-gray-50">
-                <td class="p-3">
-                  <input type="text" name="productName" value="<%= product.name %>"
-                    class="w-full bg-transparent border-gray-300 focus:outline-none focus:border-purple-500" readonly>
-                </td>
-                <td class="p-3">
-                  <input type="text" name="category" value="<%= product.category %>"
-                    class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
-                </td>
-                <td class="p-3">
-                  <input type="text" name="color" value="<%= product.color %>"
-                    class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
-                </td>
-                <td class="p-3">
-                  <input type="number" name="price" value="<%= product.price %>"
-                    class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
-                </td>
-                <td class="p-3">
-                  <input type="number" name="stock" value="79"
-                    class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
-                </td>
-                <td class="p-3">
-                  <button type="button" class="edit-btn bg-blue-50 mb-2 text-blue-600 px-3 py-2 rounded-lg hover:bg-blue-300 flex items-center gap-2">✏️ Edit</button>
-                  <button type="submit" class="bg-green-100 mb-2 text-green-900 px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-all save-btn hidden">✅ Save</button>
-                  <button class="delete-btn bg-red-50 text-red-600 px-3 py-2 rounded-lg hover:bg-red-400 flex items-center gap-2">
-                    ❌ Delete
-                  </button>
-                </td>
-                <!--
+              <% products.forEach(product=> { %>
+                <!-- Example row -->
+                <tr data-id="<%= product.id %>" class="border-b hover:bg-gray-50">
+                  <td class="p-3">
+                    <input type="text" name="productName" value="<%= product.name %>"
+                      class="w-full bg-transparent border-gray-300 focus:outline-none focus:border-purple-500" readonly>
+                  </td>
+                  <td class="p-3">
+                    <input type="text" name="category" value="<%= product.category %>"
+                      class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500"
+                      readonly>
+                  </td>
+                  <td class="p-3">
+                    <input type="text" name="color" value="<%= product.color %>"
+                      class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500"
+                      readonly>
+                  </td>
+                  <td class="p-3">
+                    <input type="number" name="price" value="<%= product.price %>"
+                      class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500"
+                      readonly>
+                  </td>
+                  <td class="p-3">
+                    <input type="number" name="stock" value="79"
+                      class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500"
+                      readonly>
+                  </td>
+                  <td class="p-3">
+                    <button type="button"
+                      class="edit-btn bg-blue-50 mb-2 text-blue-600 px-3 py-2 rounded-lg hover:bg-blue-300 flex items-center gap-2">✏️
+                      Edit</button>
+                    <button type="submit"
+                      class="bg-green-100 mb-2 text-green-900 px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-all save-btn hidden">✅
+                      Save</button>
+                    <button
+                      class="delete-btn bg-red-50 text-red-600 px-3 py-2 rounded-lg hover:bg-red-400 flex items-center gap-2">
+                      ❌ Delete
+                    </button>
+                  </td>
+                  <!--
                 <td class="p-3">
                         <a href="/edit/< %= product.id %>" class="text-blue-500 hover:underline">Edit</a>
                         <a href="/delete/< %= product.id %>" class="text-red-500 hover:underline">Delete</a>
                     </td>
                     -->
-              </tr>
-              <% }) %>
+                </tr>
+                <% }) %>
             </tbody>
           </table>
         </div>
