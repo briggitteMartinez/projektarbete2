@@ -12,7 +12,8 @@ form.addEventListener('submit', (e) => { // Lägger till en händelselyssnare f�
         formData.get("imageurl1"),
         formData.get("imageurl2"),
         formData.get("imageurl3")
-    ].join(imgSeparator);
+    ]
+    const newImageUrls = JSON.stringify(imageUrls); // Omvandlar till en JSON-sträng
 
         // Generera en unik SKU
         const generateSKU = () => {
@@ -35,7 +36,7 @@ form.addEventListener('submit', (e) => { // Lägger till en händelselyssnare f�
         name: formData.get("name"),
         price: formData.get("price"),
         description: formData.get("description"),
-        image: imageUrls, //Kombinerar bild-URL:erna till en enda sträng
+        image: newImageUrls, //en json sträng
         category: formData.get("category"),
         size: formData.get("size"),
         color: formData.get("color"),
