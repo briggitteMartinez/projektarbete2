@@ -2,11 +2,10 @@
 // Innehåller rutter för att hämta och lägga till produkter i databasen
 var express = require('express');
 var router = express.Router();
-var { db, importProducts } = require('../public/javascripts/db'); // Importera databasen och importfunktionen
+var { db, importProducts,updateProduct, deleteProduct } = require('../public/javascripts/db'); // Importera databasen och importfunktionen
 
-
-
-// GET // Hämta produkter från databasen
+// GET //////////////////////////////////////////////////////// 
+//Hämta produkter från databasen
 router.get('/', (req, res) => {
   try {
     const rows = db.prepare('SELECT * FROM productDetails').all();
@@ -15,7 +14,18 @@ router.get('/', (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-// POST /api/import - Tar emot JSON-data och lägger in i databasen
+// Hämta produkter och rendera edit.ejs
+router.get('/edit', (req, res) => {
+  try {
+    const rows = db.prepare('SELECT * FROM productDetails').all();
+    res.render('edit', { products: rows }); // Skickar produkterna till edit.ejs
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// POST /////////////////////////////////////////////////////
+// Tar emot JSON-data och lägger in i databasen
 router.post('/import', (req, res) => {
   try {
     const products = req.body; // Hämta JSON-data från förfrågan
@@ -30,10 +40,7 @@ router.post('/import', (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
-
-
-
-// POST // Lägg till en ny produkt i databasen och returnera den lagrade datan
+//Lägg till en NY produkt i databasen och returnera den lagrade datan
 router.post('/', (req, res) => {
   const { name, price, description, image, category, size, color, brand, sku, slug } = req.body;
   try {
@@ -46,11 +53,43 @@ router.post('/', (req, res) => {
   }
 });
 
-// GET // Hämta produkter och rendera edit.ejs
-router.get('/edit', (req, res) => {
+// PUT /////////////////////////////////////////////////////
+// Uppdatera en produkt i databasen via PUT
+router.put("/edit/:id", (req, res) => {
+  const { productName, category, price, color } = req.body;
+  const { id } = req.params;
+
+  console.log("Received update request for ID:", id);
+  console.log("Data:", { productName, category, price, color });
+
   try {
-    const rows = db.prepare('SELECT * FROM productDetails').all();
-    res.render('edit', { products: rows }); // Skickar produkterna till edit.ejs
+    const updatedProduct = updateProduct(id, productName, category, price, color);
+
+    if (!updatedProduct) {
+      return res.status(404).json({ message: "Product not found!" });
+    }
+
+    res.json(updatedProduct);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// DELETE //////////////////////////////////////////////////
+// Ta bort en produkt från databasen
+router.delete("/edit/:id", (req, res) => {
+  const { id } = req.params;
+
+  console.log("Received delete request for ID:", id);
+
+  try {
+    const deletedProduct = deleteProduct(id); // Anropa `deleteProduct()` från `db.js`
+
+    if (!deletedProduct) {
+      return res.status(404).json({ message: "Product not found!" });
+    }
+
+    res.json({ message: "Product deleted successfully!" });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

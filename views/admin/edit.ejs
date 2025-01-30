@@ -46,14 +46,12 @@
         <div class="bg-white p-6 rounded-lg shadow-md">
           <div class="flex justify-between items-center mb-4">
             <h2 class="text-xl font-bold">Products List</h2>
-            <button class="bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-purple-700">
+            <button class="font-bold bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-300">
               <a href="admin/new">+ Add Product</a>
             </button>
           </div>
 
-          <!-- Product Table Dummy data-->
-          <!--TODO - lägg till edit knappar och gör varje felt redigerbar vid klick-->
-          <!-- TODO  - generera listan (TR)dynamiskt-->
+          <!-- Table -->
           <table class="min-w-full bg-white border border-gray-200 rounded-md">
             <thead>
               <tr class="border-b bg-gray-100">
@@ -68,7 +66,7 @@
             <tbody>
               <% products.forEach(product => { %>
               <!-- Example row -->
-              <tr class="border-b hover:bg-gray-50">
+              <tr data-id="<%= product.id %>" class="border-b hover:bg-gray-50">
                 <td class="p-3">
                   <input type="text" name="productName" value="<%= product.name %>"
                     class="w-full bg-transparent border-gray-300 focus:outline-none focus:border-purple-500" readonly>
@@ -90,8 +88,11 @@
                     class="w-full bg-transparent  border-gray-300 focus:outline-none focus:border-purple-500" readonly>
                 </td>
                 <td class="p-3">
-                  <button type="button" class="text-red-600 hover:underline edit-btn">Edit</button>
-                  <button type="submit" class="text-green-600 hover:underline save-btn hidden">Save</button>
+                  <button type="button" class="edit-btn bg-blue-50 mb-2 text-blue-600 px-3 py-2 rounded-lg hover:bg-blue-300 flex items-center gap-2">✏️ Edit</button>
+                  <button type="submit" class="bg-green-100 mb-2 text-green-900 px-4 py-2 rounded-lg font-bold hover:bg-green-500 transition-all save-btn hidden">✅ Save</button>
+                  <button class="delete-btn bg-red-50 text-red-600 px-3 py-2 rounded-lg hover:bg-red-400 flex items-center gap-2">
+                    ❌ Delete
+                  </button>
                 </td>
                 <!--
                 <td class="p-3">
