@@ -18,7 +18,8 @@ router.get('/search', function(req, res, next) {
 
   const select = data.prepare(`SELECT * FROM productDetails WHERE name LIKE ? OR description LIKE ? OR category LIKE ? OR brand LIKE ? OR color LIKE ?`);
   const search = `%${query}%`;
-  const products = select.all(search, search, search, search, search);
+  const searchCategory = `${query}%`;
+  const products = select.all(search, search, searchCategory, search, search);
   products.forEach(product => {
     product.image = JSON.parse(product.image);
   });

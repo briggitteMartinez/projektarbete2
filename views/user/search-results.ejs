@@ -57,17 +57,17 @@
                 <tbody>
                   <% products.forEach(function(product) { %>
                     <tr class="bg-white border-b">
-                      <td class="px-4 py-2 font-semibold">
+                      <td class="px-4 py-2 font-semibold max-h-32">
                         <div class="flex items-center space-x-4">
-                          <a href="<%= product.slug %>" class="flex-1">
+                          <a href="<%= product.slug %>" class="flex-1 hidden sm:block">
                             <img class="w-1/2 h-full object-cover py-2 shadow-lg bg-gray-200 rounded-lg dark:bg-gray-900 border-2 border-gray-200 hover:bg-gray-300 dark:border-gray-700 dark:hover:bg-gray-600" src="<%= product.image[0] %>" alt="<%= product.name %>">
                           </a>
-                          <div class="flex-1 hover:underline"><a href="<%= product.slug %>"><%= product.name %></a></div>
+                          <div class="flex-1 hover:underline capitalize"><a href="<%= product.slug %>"><%= product.name %></a></div>
                         </div>
                       </td>
-                      <td class="px-4 py-2"><%= product.description %></td>
-                      <td class="px-4 py-2"><%= product.category %></td>
-                      <td class="px-4 py-2"><%= product.brand %></td>
+                      <td class="px-4 py-2 capitalize"><%= product.description %></td>
+                      <td class="px-4 py-2 capitalize"><%= product.category %></td>
+                      <td class="px-4 py-2 capitalize"><%= product.brand %></td>
                       <td class="px-4 py-2"><%= product.price %></td>
                     </tr>
                   <% }); %>
